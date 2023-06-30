@@ -1,0 +1,333 @@
+:root {
+    --fs-900: 3rem;
+    --fs-800: 2.5rem;
+    --fs-700: 2rem;
+    --fs-400: 1rem;
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+    --size-400: 1.5rem;
+    --size-500: 3rem;
+    --size-600: 6rem;
+
+    /* Primary: Sir Edmund */
+    --primary-100: #F2F6FF;
+    --primary-200: #C9DAFC;
+    --primary-300: #96B8EB;
+    --primary-400: #5B87BB;
+    --primary-500: #1F405E;
+    --primary-600: #113650;
+    --primary-700: #0A2E42;
+    --primary-800: #072634;
+    --primary-900: #051E26;
+
+    /* Accent: Sinoper Red */
+    --accent-100: #FFF2F2;
+    --accent-200: #FEB9B9;
+    --accent-300: #F77E7E;
+    --accent-400: #E44242;
+    --accent-500: #BF0D10;
+    --accent-600: #990510;
+    --accent-700: #730110;
+    --accent-800: #4D000F;
+    --accent-900: #26000A;
+
+    /* Neutral */
+    --neutral-100: #FAFBFC;
+    --neutral-200: #E9EBEE;
+    --neutral-300: #D8DBDF;
+    --neutral-400: #C8CCD0;
+    --neutral-500: #B8BDC2;
+    --neutral-600: #91979B;
+    --neutral-700: #6B7174;
+    --neutral-800: #464B4D;
+    --neutral-900: #222526;
+
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--neutral-100);
+}
+
+.navbar-brand {
+    font-family: 'BespokeStencil-Variable';
+    color: var(--primary-800);
+}
+
+.nav-link {
+    margin-right: 30px;
+    color: var(--primary-800);
+}
+
+.main {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    background-color: var(--neutral-100);
+    overflow: hidden;
+}
+
+.content-wrapper {
+    margin: auto 0;
+}
+
+.name-profile {
+    margin-left: 2px;
+    font-size: 40px;
+    color: var(--primary-800);
+}
+
+.content-title {
+    font-family: 'BespokeStencil-Variable';
+    font-size: 80px;
+    font-weight: 600;
+    color: var(--neutral-700);
+
+}
+
+.content-title span {
+    color: var(--primary-800);
+}
+
+.subtitle-2 {
+    font-family: 'BespokeStencil-Variable';
+    margin-left: 2px;
+    font-size: 24px;
+    color: var(--neutral-700);
+
+}
+
+.skill-title {
+    position: relative;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: var(--neutral-700);
+}
+
+.skill-title-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-65%)translateY(100%);
+    width: 240px;
+    height: 4px;
+    background: var(--neutral-700);
+    border-radius: 25px;
+}
+
+.skill-list {
+    margin-top: 32px;
+}
+
+.skill-list img {
+    max-width: 40px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    margin: 0 10px;
+}
+
+.home-image img {
+    max-width: 250px;
+}
+
+@media (max-width: 70em) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+    }
+
+    .home-image {
+        order: 1;
+    }
+
+    .content-wrapper {
+        order: 2;
+    }
+
+    .main-wrapper {
+        padding: 40px 8%;
+    }
+
+    .name-profile {
+        font-size: 24px;
+        font-weight: 300;
+    }
+
+    .content-title {
+        font-size: 36px;
+    }
+
+    .subtitle-2 {
+        font-size: 20px;
+        padding-bottom: 6px;
+    }
+
+    .skill-title {
+        font-size: 16px;
+    }
+}
+
+/* Project */
+
+.project {
+    background-color: var(--neutral-100);
+}
+
+.section-title h2 {
+    letter-spacing: 20px;
+    font-family: 'BespokeStencil-Extrabold';
+}
+
+.project-img img {
+    max-width: 100%;
+    display: block;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-img-top {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+
+.card-body {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    backdrop-filter: blur(2px) saturate(180%);
+    -webkit-backdrop-filter: blur(2px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card:hover .card-body {
+    opacity: 1;
+}
+
+.card-body h5,
+.card-body p {
+    color: #fff;
+    padding: 10px;
+}
+
+/* Contact */
+
+.contact {
+    background-color: var(--neutral-100);
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-700);
+}
+
+.footer .footer-heading {
+    font-family: 'BespokeStencil-Variable';
+    font-size: 30px;
+    color: var(--primary-100);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer .footer-heading .logo {
+    color: #fff;
+}
+
+
+/* Social Media */
+.social-media a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-media a:last-child {
+    margin-right: 0;
+}
+
+.social-media a svg {
+    color: var(--primary-200);
+    width: 20px;
+    fill: currentColor;
+}
+
+.copyright {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--primary-100);
+    font-weight: 500;
+}
+
+.fs-800 {
+    font-size: var(--fs-800);
+}
+
+.fs-900 {
+    font-size: var(--fs-900);
+}
+
+.fw-400 {
+    font-weight: var(--fw-400);
+}
+
+.fw-700 {
+    font-weight: var(--fw-700);
+}
+
+.padding-block-400 {
+    padding-block: var(--size-400);
+}
+
+.padding-block-500 {
+    padding-block: var(--size-500);
+}
+
+.padding-block-600 {
+    padding-block: var(--size-600);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding);
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-300);
+    color: var(--accent-100);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    z-index: 9999;
+}
+
+.scroll-to-top:hover {
+    background-color: var(--neutral-600);
+}
